@@ -2,40 +2,35 @@
 <html lang="pl">
 
 <head>
+<!--   metadane:ogólne-->
     <meta charset="utf-8"/>
     <title>GEOPORTAL</title>
     <meta name="geoprtal jw"/>
     <meta name="keywords" content="jw, army, wosjko"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <link rel="stylesheet" href="style.css" type="text/css"/>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-    
-   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-   crossorigin=""/>
-   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico"/>
+    <!--   metadane:linki css-->
+    <link rel="stylesheet" href="lib/leaflet.css">
+    <link rel="stylesheet" href="main.css">
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
    crossorigin=""></script>
-   <script>src="leaflet.js"</script>
-   <script src="jquery-3.4.1.min.js"></script>
-   <srcipt src="main.js"></srcipt>
-   <script>OSM_URL = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-		OSM_ATTRIB = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';</script>
+    
 </head>
 
 <body>
     <div id="container">
-        <br/>
-    
-    <div class="stopka">
-        <h1>GEOPORTAL</h1>
+        <div id="mapa">mapa</div>
     </div>
+        <!--   metadane:linki js-->
+    <script src="lib/jquery.js"></script>
+    <script src="lib/leaflet.js"></script>
+    <script src="main.js"></script>
     
-    <div id="opis">opis</div>
-    <div id="mapa">mapa</div>
-    <div class="stopka">stopka</div>
-    
+  
+  </body>
    
-    </div>
-</body>
+   
     
 </html>

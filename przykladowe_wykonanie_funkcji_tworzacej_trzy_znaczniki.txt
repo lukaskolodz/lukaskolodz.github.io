@@ -1,0 +1,53 @@
+ <script>
+        var layerMarkers;
+        var arrMarkers = [];
+        function createMarkersLayer(id, layerName, displayInLayerSwitcher, setVisibility)
+        {
+            layerMarkers = new OpenLayers.Layer.Markers(layerName);
+            layerMarkers.id = id;
+            layerMarkers.displayInLayerSwitcher = displayInLayerSwitcher;
+            layerMarkers.setVisibility(setVisibility);
+        }
+        function createMarkers(id, lon, lat, markerFile, markerWidth, markerHeight, offsetX, offsetY,popupTitle, popupDescription, popupImage, popupImageCaption) 
+        { 
+            var lonLat = new OpenLayers.LonLat(lon, lat)
+            var size = new OpenLayers.Size(markerWidth, markerHeight);
+            var offset = new OpenLayers.Pixel(offsetX, offsetY);
+            var icon = new OpenLayers.Icon(markerFile,size, offset);
+            var feature = new OpenLayers.Feature(layerMarkers, lonLat, {'icon': icon});
+            feature.popupClass = OpenLayers.Class(OpenLayers.Popup.Anchored, {'autoSize': true});
+            var marker = feature.createMarker();
+            marker.id = id;
+            marker.PlaneID = id;
+             marker.events.register("click", marker, function(evt){
+ 
+            var popupHtml=''
+                popupHtml+='<div id="frameCloud">'
+                popupHtml+='<h1>'+popupTitle+'</h1>'
+                popupHtml+='<span id="dscr">'+popupDescription+'</span>'
+                popupHtml+='<div id="foto">'
+                popupHtml+='<img src="'+popupImage+'" alt="foto '+popupTitle+'"/><br>'
+                popupHtml+='<span>'+popupImageCaption+'</span>'
+                popupHtml+='</div></div>'
+                 
+            popup = new OpenLayers.Popup.FramedCloud(
+                id = 'myFramedCloud',
+                lonlat = marker.lonlat,
+                contentSize = new OpenLayers.Size(0, 0),
+                contentHTML = popupHtml,
+                anchor = null, 
+                closeBox = true);
+             map.addPopup(popup, exclusive = true);
+            OpenLayers.Event.stop(evt);
+            });
+             marker.events.register('mouseover', marker,  function(evt)
+            {
+                feature.layer.div.style.cursor = "pointer";
+                OpenLayers.Event.stop(evt);
+                layerMarkers.addMarker(marker);     
+                arrMarkers.push(marker);     
+                map.addLayer(layerMarkers);
+              }     
+              });
+            
+    </script>
