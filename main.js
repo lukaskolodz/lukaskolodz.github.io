@@ -11,7 +11,7 @@ $(document).ready(function(){
         popupAnchor: [0,-34],
     })
     
-  var formularz = '<select id="cars" name="cars"><option value="volvo">Volvo</option><option value="saab">Saab</option><option value="fiat">Fiat</option> ' 
+  var formularz = '<select id="jednostka" name="jednostka"><option value="czołg">Czołg</option><option value="traktor">Traktor</option> </select>' 
 /*funkcja która będzie po kliknięciu wypisywała tekst*/
     mymap.on('click', function(event){
         console.log(event.latlng);
@@ -25,9 +25,13 @@ $(document).ready(function(){
                   +' E'
                   +'<br>'
                   +event.latlng.lat.toFixed(3)
-                  +' N')
+                  +' N'
+                  +'<br>'
+                  +'Jednostka '
+                  + formularz)
        .openPopup();
        
+        /*-------------------------------------------*/
     })
    
 });
