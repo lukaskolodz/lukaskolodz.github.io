@@ -13,6 +13,7 @@ $(document).ready(function(){
     
   var formularz = '<select id="jednostka" name="jednostka"><option value="czołg">Czołg</option><option value="traktor">Traktor</option> </select>' 
 /*funkcja która będzie po kliknięciu wypisywała tekst*/
+    
     mymap.on('click', function(event){
         console.log(event.latlng);
         var opcja = '';
@@ -28,10 +29,9 @@ $(document).ready(function(){
                   +' N'
                   +'<br>'
                   +'Jednostka '
-                  + formularz)
+                  +  formularz)
        .openPopup();
        
-        /*-------------------------------------------*/
     })
    
 });
