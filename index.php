@@ -1,10 +1,10 @@
 <?php
 
 $db_host="localhost";
-$db_host="5432";
-$db_host="postgres";
-$db_host="admin";
-$db_host="baza_danych";
+$db_port="5432";
+$db_user="postgres";
+$db_pass="admin";
+$db_name="baza_danych";
     
   $conn_string ="host=".$db_host." port=".$db_port." dbname=".$db_name." user=".$db_user." password=".$db_pass;
 

@@ -11,21 +11,12 @@ $(document).ready(function(){
         popupAnchor: [0,-34],
     })
     
-    npm install pg-promise
-
-        var pgp = require('pg-promise')(/* options */)
-        var db = pgp('postgres://postrgres:admin@localhost:52410/baza_danych')
-
-        db.one('SELECT $1 AS value', 123)
-        .then(function (data) {
-        console.log('DATA:', data.value)
-        })
-        .catch(function (error) {
-        console.log('ERROR:', error)
-        })
-     
-  var formularz = '<select id="jednostka" name="jednostka"><option value="nie rozpoznano">Nie rozpoznano</option><option value="czołg">Czołg</option><option value="traktor">Traktor</option> </select>' 
+  
+  var formularz = '<select id="jednostka" name="jednostka"><option value="nie rozpoznano">Nie rozpoznano</option><option value="czołg">Czołg</option><option value="traktor">Traktor</option></select><br>' 
+    
+    
 /*funkcja która będzie po kliknięciu wypisywała tekst*/
+    
     
     mymap.on('click', function(event){
         console.log(event.latlng);
@@ -47,6 +38,8 @@ $(document).ready(function(){
        
     })
    
+    
+    
 });
     
 /*dodac skale, zmienić ikone, dodać*/
