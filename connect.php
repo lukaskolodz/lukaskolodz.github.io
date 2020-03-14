@@ -1,5 +1,10 @@
 <?php
-require_once ('database.php');
+    
+    $db_host="localhost";
+    $db_port="5432";
+    $db_name="baza_danych";
+    $db_user="postgres";
+    $db_pass="admin";
     
     $tekst_polaczenia = "host=$db_host port=$db_port dbname=$db_name user=$db_user password=$db_pass";
 
@@ -7,6 +12,7 @@ require_once ('database.php');
 
     $status_polaczenia = pg_connection_status($polaczenie);
 
-    if($status_polaczenia===PGSQL_CONNECTION_OK) ;
+    if($status_polaczenia===PGSQL_CONNECTION_OK)
+        echo "poprawnie nawiozanno polaczenie";
     
 ?>

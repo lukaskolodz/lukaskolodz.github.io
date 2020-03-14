@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
     var mymap = L.map('mapa',{center:[52.1,21.0],zoom:10});
     var lyrOSM=L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png');
     mymap.addLayer(lyrOSM);
@@ -36,10 +36,22 @@ $(document).ready(function(){
                   +  formularz)
        .openPopup();
        
+        
+        var lat = event.latlng.lat.toFixed(3);
+        var lng = event.latlng.lng.toFixed(3);
+        var typ_j = $(formularz).val();
+        
+        $.ajax({
+            url:"insert.php",
+            type:"POST",
+            data:{ lat: lat, lng: lng, typ_j: typ_j}
+            
+            
+            
+        })
+        
     })
    
-    
-    
 });
     
 /*dodac skale, zmienić ikone, dodać*/
