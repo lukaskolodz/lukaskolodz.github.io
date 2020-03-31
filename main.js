@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var mymap = L.map('mapa',{center:[52.1,21.0],zoom:10});
+    var mymap= L.map('mapa',{center:[52.23,21.00],zoom:10});
     var lyrOSM=L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png');
     mymap.addLayer(lyrOSM);
     
@@ -10,15 +10,14 @@ $(document).ready(function() {
         iconAnchor: [10,34],
         popupAnchor: [0,-34],
     })
-    
-  
+
   var formularz = '<select id="jednostka" name="jednostka"><option value="nie rozpoznano">Nie rozpoznano</option><option value="czołg">Czołg</option><option value="traktor">Traktor</option></select><br>' 
     
     
 /*funkcja która będzie po kliknięciu wypisywała tekst*/
     
     
-    mymap.on('click', function(event){
+	mymap.on('click', function(event){
         console.log(event.latlng);
         var opcja = '';
        var marker = L
@@ -35,23 +34,26 @@ $(document).ready(function() {
                   +'Jednostka '
                   +  formularz)
        .openPopup();
-       
-        
-        var lat = event.latlng.lat.toFixed(3);
-        var lng = event.latlng.lng.toFixed(3);
-        var typ_j = $(formularz).val();
-        
-        $.ajax({
-            url:"insert.php",
-            type:"POST",
-            data:{ lat: lat, lng: lng, typ_j: typ_j}
             
             
-            
-        })
-        
-    })
-   
-});
+        });
+		
+  /* połączenie z bazą danych */
+  $.ajax({
+    type:'POST',
+    url: 'connect.php',
+    success: function(response){ 
+      console.log("udało połączyc się z bd")
+      },
+    error: function(err_info){
+		  console.log('Błąd podczas pracy skryptu');
+		  console.log(err_info);
+      },
+    });
+  
+});     
     
+   
+
+   
 /*dodac skale, zmienić ikone, dodać*/

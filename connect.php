@@ -11,7 +11,6 @@
     $polaczenie = pg_connect ("$tekst_polaczenia");
 
     $status_polaczenia = pg_connection_status($polaczenie);
-
     if($status_polaczenia===PGSQL_CONNECTION_OK)
         echo "poprawnie nawiozanno polaczenie";
     
