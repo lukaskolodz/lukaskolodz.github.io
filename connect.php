@@ -2,7 +2,7 @@
     
     $db_host="localhost";
     $db_port="5432";
-    $db_name="baza_danych";
+    $db_name="postgres";
     $db_user="postgres";
     $db_pass="admin";
     
@@ -13,5 +13,7 @@
     $status_polaczenia = pg_connection_status($polaczenie);
     if($status_polaczenia===PGSQL_CONNECTION_OK)
         echo "poprawnie nawiozanno polaczenie";
+    else
+        echo "nie wyszło";
     
 ?>
