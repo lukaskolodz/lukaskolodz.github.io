@@ -12,8 +12,8 @@
     
     //polecenie wprowadzania danych insert
     $query = "INSERT INTO public.jednostki(
-	 lat, lng, typ_jednostki)
-	VALUES ( $lat, $lng, 'czolg');";
+	  id, coor, typ_jedn)
+	VALUES ('1',ST_GeographyFromText('SRID=4326; POINT($lng $lat)'),'czolg')";
     $result = pg_query($query); 
 
     $sql = "SELECT * FROM public.jednostki";
