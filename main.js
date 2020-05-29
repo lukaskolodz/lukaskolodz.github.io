@@ -33,8 +33,8 @@ $(document).ready(function() {
                    +event.latlng.lat.toFixed(3)
                    +' N'
                    +'<br>'
-                   +'Jednostka '
-                   +  formularz)
+                   +'JEDNOSTKA '
+                   + formularz)
         .openPopup();
             
         $.ajax({
