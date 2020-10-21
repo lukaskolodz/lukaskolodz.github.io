@@ -3,8 +3,7 @@
 
     $lat = $_POST['lat'];
     $lng = $_POST['lng'];
-       
-
+	
 
     //wprowadzanie danych do bazy danych
    

@@ -12,9 +12,9 @@ $polaczenie = pg_connect ("$tekst_polaczenia");
     
 $status_polaczenia = pg_connection_status($polaczenie);
     if($status_polaczenia===PGSQL_CONNECTION_OK)
-        echo "poprawnie nawiazanno polaczenie";
-    else
-        echo "nie wyszło";
+       // echo "poprawnie nawiazanno polaczenie";
+    //else
+        //echo "nie wyszło";
     
 ?>
 
@@ -37,6 +37,10 @@ $status_polaczenia = pg_connection_status($polaczenie);
     
 </head>
 <body>
+	
+	<form>
+	<button id="pobierz" type="button">Pobierz</button> 
+	</form>
     <div id="container">
         <div id="mapa">mapa</div>
     </div>
