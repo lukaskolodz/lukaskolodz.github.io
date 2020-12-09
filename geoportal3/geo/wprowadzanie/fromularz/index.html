@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<meta charset="UTF-8"></meta>
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+	<!--leaflet-->
+	 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="../../main.css">
+
+
+</head>
+<body>
+
+	<header>
+	
+		<h1 class="logo">FORMULARZ</h1>
+		
+		<nav id="topnav">
+		
+			<ul class="menu">
+				<li><a href="../../index.html">Strona główna</a></li>
+				<li><a href="../../geo_artykul/index.html">Do czego służy GEOPORTAL</a></li>
+				<li><a href="../../wig/index.html">O Wydziale Inżynierii Lądowej i Geodezji</a></li>
+				<li><a href="../../autor/index.html">O autorze</a></li>
+				<li><a href="../../kontakt/index.html">Kontakt</a></li>
+			</ul>
+			
+		</nav>
+	
+	</header>
+
+
+
+
+
+<div class="container-fluid">
+		<form id="formularz" action="formularz.php" method="POST"> <!-- formularz przesyła dane jawnie-->
+		<h3>Formularz wprowadzania danych</h3>
+		<fieldset>
+			<legend><h4>Położenie</h4></legend>
+			Pole nr 1 <br><input type="text" name="pole1" placeholder="pole tekstowe" required><br>
+			Pole nr 2 <br><input type="email" name="pole2" placeholder="email@gmail.com" required><br>
+			Pole nr 3 <br><input type="password" name="pole3" placeholder="password" required><br>
+			Pole nr 4 <br><input type="date" name="pole4"><br>
+			<hr>
+			<legend><h4>Charakterystyka obiektu</h4></legend>
+			Pole nr 5 <br> 
+					  <input type="radio" name="radio01" value="wartość01" checked> wartość 01<br>
+					  <input type="radio" name="radio01" value="wartość02"> wartość 02<br>
+					  <input type="radio" name="radio01" value="wartość02"> wartość 03<br>
+			<hr>
+			<legend><h4>Informacje ogólne</h4></legend>
+			Pole nr 6 <br>
+					<input type="checkbox" name="pole5"checked> pole 6 a <br>
+					<input type="checkbox" name="pole6"> pole 6 b <br>
+					<input type="checkbox" name="pole7"> pole 6 c <br>
+			<hr>
+			Pole nr 7 <br>
+					<select name="pole8">
+						<option value="wartość 1" > Wartość 1</option>
+						<option value="wartość 2" selected> Wartość 2</option>
+					</select><br>
+		</fieldset><br>
+
+		<input type="submit" value="wyślij!">
+		<input type="reset">
+
+	</form>
+			</div>
+
+		
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

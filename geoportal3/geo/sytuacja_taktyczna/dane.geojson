@@ -1,0 +1,522 @@
+var geojsonFeature={
+  "type": "FeatureCollection",
+  "features": [
+   
+      {
+      "type": "Feature",
+        "properties": {
+          "id": 1,
+          "description": {
+          		"trescNaglowka" : "Nazwa jednostki wojskowej 1",
+          		"trescOgloszenia" : "Charakterystyka wprowadzona przez element rozpoznawczy",
+          		"wartosc1" : "<b>Treść 1</b>: wyposażenie ",
+          		"wartosc2" : "<b>Treść 2</b>: czas obserwacji",
+          		},
+          "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
+            "symbol_circle": {
+            "radius": 8,
+            "fillColor": "#42f5a7",
+            "color": "#42f5a7",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 0.8
+          },
+          "symbol_sign": {
+            "iconUrl": 'img/SHGPUCA----D.png',
+            
+            "popupAnchor": [-3, -76],
+            
+          }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.016845703125,
+          52.29756190868707
+        ]
+      }
+    },
+     
+      {
+      "type": "Feature",
+        "properties": {
+          "id": 1,
+          "description": {
+          		"trescNaglowka" : "Nazwa jednostki wojskowej 2",
+          		"trescOgloszenia" : "Charakterystyka wprowadzona przez element rozpoznawczy",
+          		"wartosc1" : "<b>Treść 1</b>: wyposażenie ",
+          		"wartosc2" : "<b>Treść 2</b>: czas obserwacji",
+          		},
+          "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
+            "symbol_circle": {
+            "radius": 8,
+            "fillColor": "#42f5a7",
+            "color": "#42f5a7",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 0.8
+          },
+          "symbol_sign": {
+            "iconUrl": 'img/SHGPUCA----D.png',
+            "popupAnchor": [-3, -76],
+            
+          }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.956636,
+          52.338514
+        ]
+      }
+    },
+	
+    {
+      "type": "Feature",
+        "properties": {
+          "id": 1,
+          "description": {
+          		"trescNaglowka" : "Nazwa jednostki wojskowej 3",
+          		"trescOgloszenia" : "Charakterystyka wprowadzona przez element rozpoznawczy",
+          		"wartosc1" : "<b>Treść 1</b>: wyposażenie ",
+          		"wartosc2" : "<b>Treść 2</b>: czas obserwacji",
+          		},
+          "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
+            "symbol_circle": {
+            "radius": 8,
+            "fillColor": "#42f5a7",
+            "color": "#42f5a7",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 0.8
+          },
+          "symbol_sign": {
+            "iconUrl": 'img/SHGPUCA----D.png',
+            "popupAnchor": [-3, -76],
+            
+          }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.791352,
+          52.415583
+        ]
+      }
+    },
+	
+{
+      "type": "Feature",
+        "properties": {
+          "id": 1,
+          "description": {
+          		"trescNaglowka" : "Nazwa jednostki wojskowej 4",
+          		"trescOgloszenia" : "Charakterystyka wprowadzona przez element rozpoznawczy",
+          		"wartosc1" : "<b>Treść 1</b>: wyposażenie ",
+          		"wartosc2" : "<b>Treść 2</b>: czas obserwacji",
+          		},
+          "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
+            "symbol_circle": {
+            "radius": 8,
+            "fillColor": "#42f5a7",
+            "color": "#42f5a7",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 0.8
+          },
+          "symbol_sign": {
+            "iconUrl": 'img/SHGPUCA----D.png',
+            "popupAnchor": [-3, -76],
+            
+          }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.738043,
+          52.494530
+        ]
+      }
+    },
+     
+      {
+      "type": "Feature",
+        "properties": {
+          "id": 1,
+          "description": {
+          		"trescNaglowka" : "Nazwa jednostki wojskowej 5",
+          		"trescOgloszenia" : "Charakterystyka wprowadzona przez element rozpoznawczy",
+          		"wartosc1" : "<b>Treść 1</b>: wyposażenie ",
+          		"wartosc2" : "<b>Treść 2</b>: czas obserwacji",
+          		},
+          "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
+            "symbol_circle": {
+            "radius": 8,
+            "fillColor": "#42f5a7",
+            "color": "#42f5a7",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 0.8
+          },
+          "symbol_sign": {
+            "iconUrl": 'img/SHGPUCI----D.png',
+            "popupAnchor": [-3, -76],
+            
+          }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.171877,
+          52.174418
+        ]
+      }
+    },
+	
+      {
+      "type": "Feature",
+        "properties": {
+          "id": 1,
+          "description": {
+          		"trescNaglowka" : "Nazwa jednostki wojskowej 6",
+          		"trescOgloszenia" : "Charakterystyka wprowadzona przez element rozpoznawczy",
+          		"wartosc1" : "<b>Treść 1</b>: wyposażenie ",
+          		"wartosc2" : "<b>Treść 2</b>: czas obserwacji",
+          		},
+          "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
+            "symbol_circle": {
+            "radius": 8,
+            "fillColor": "#42f5a7",
+            "color": "#42f5a7",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 0.8
+          },
+          "symbol_sign": {
+            "iconUrl": 'img/SHGPUCI----D.png',
+            "popupAnchor": [-3, -76],
+            
+          }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.232954,
+          52.114912
+        ]
+      }
+    },
+	
+      {
+      "type": "Feature",
+        "properties": {
+          "id": 1,
+          "description": {
+          		"trescNaglowka" : "Nazwa jednostki wojskowej 7",
+          		"trescOgloszenia" : "Charakterystyka wprowadzona przez element rozpoznawczy",
+          		"wartosc1" : "<b>Treść 1</b>: wyposażenie ",
+          		"wartosc2" : "<b>Treść 2</b>: czas obserwacji",
+          		},
+          "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
+            "symbol_circle": {
+            "radius": 8,
+            "fillColor": "#42f5a7",
+            "color": "#42f5a7",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 0.8
+          },
+          "symbol_sign": {
+            "iconUrl": 'img/SHGPUCI----D.png',
+            "popupAnchor": [-3, -76],
+            
+          }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.200155,
+          52.240240
+        ]
+      }
+    },
+	
+	{
+      "type": "Feature",
+        "properties": {
+          "id": 1,
+          "description": {
+          		"trescNaglowka" : "Nazwa jednostki wojskowej 8",
+          		"trescOgloszenia" : "Charakterystyka wprowadzona przez element rozpoznawczy",
+          		"wartosc1" : "<b>Treść 1</b>: wyposażenie ",
+          		"wartosc2" : "<b>Treść 2</b>: czas obserwacji",
+          		},
+          "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
+            "symbol_circle": {
+            "radius": 8,
+            "fillColor": "#42f5a7",
+            "color": "#42f5a7",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 0.8
+          },
+          "symbol_sign": {
+            "iconUrl": 'img/SHGPUCI----D.png',
+            "popupAnchor": [-3, -76],
+            
+          }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.155696,
+          52.278763
+        ]
+      }
+    },
+	
+	{
+      "type": "Feature",
+        "properties": {
+          "id": 1,
+          "description": {
+          		"trescNaglowka" : "Nazwa jednostki wojskowej 9",
+          		"trescOgloszenia" : "Charakterystyka wprowadzona przez element rozpoznawczy",
+          		"wartosc1" : "<b>Treść 1</b>: wyposażenie ",
+          		"wartosc2" : "<b>Treść 2</b>: czas obserwacji",
+          		},
+          "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
+            "symbol_circle": {
+            "radius": 8,
+            "fillColor": "#42f5a7",
+            "color": "#42f5a7",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 0.8
+          },
+          "symbol_sign": {
+            "iconUrl": 'img/SHGPUCI----E.png',
+            "popupAnchor": [-3, -76],
+            
+          }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.081212,
+          52.349359
+        ]
+      }
+    },
+	
+    {
+      "type": "Feature",
+        "properties": {
+          "id": 1,
+          "description": {
+          		"trescNaglowka" : "Nazwa jednostki wojskowej 10",
+          		"trescOgloszenia" : "Charakterystyka wprowadzona przez element rozpoznawczy",
+          		"wartosc1" : "<b>Treść 1</b>: wyposażenie ",
+          		"wartosc2" : "<b>Treść 2</b>: czas obserwacji",
+          		},
+          "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
+            "symbol_circle": {
+            "radius": 8,
+            "fillColor": "#42f5a7",
+            "color": "#42f5a7",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 0.8
+          },
+          "symbol_sign": {
+            "iconUrl": 'img/SHGPUCA----E.png',
+            "popupAnchor": [-3, -76],
+            
+          }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.056383,
+          52.401880
+        ]
+      }
+    },
+      
+    {
+      "type": "Feature",
+        "properties": {
+          "id": 1,
+          "description": {
+          		"trescNaglowka" : "Nazwa jednostki wojskowej 11",
+          		"trescOgloszenia" : "Charakterystyka wprowadzona przez element rozpoznawczy",
+          		"wartosc1" : "<b>Treść 1</b>: wyposażenie ",
+          		"wartosc2" : "<b>Treść 2</b>: czas obserwacji",
+          		},
+          "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
+            "symbol_circle": {
+            "radius": 8,
+            "fillColor": "#42f5a7",
+            "color": "#42f5a7",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 0.8
+          },
+          "symbol_sign": {
+            "iconUrl": 'img/SHGPUCA---AE.png',
+            "popupAnchor": [-3, -76],
+            
+          }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.144148,
+          52.562930
+        ]
+      }
+    },
+	
+	{
+      "type": "Feature",
+        "properties": {
+          "id": 1,
+          "description": {
+          		"trescNaglowka" : "Nazwa jednostki wojskowej 12",
+          		"trescOgloszenia" : "Charakterystyka wprowadzona przez element rozpoznawczy",
+          		"wartosc1" : "<b>Treść 1</b>: wyposażenie ",
+          		"wartosc2" : "<b>Treść 2</b>: czas obserwacji",
+          		},
+          "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
+            "symbol_circle": {
+            "radius": 8,
+            "fillColor": "#42f5a7",
+            "color": "#42f5a7",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 0.8
+          },
+          "symbol_sign": {
+            "iconUrl": 'img/SHGPUCI---AF.png',
+            "popupAnchor": [-3, -76],
+            
+          }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.474353,
+          52.419671
+        ]
+      }
+    },
+	
+	{
+      "type": "Feature",
+        "properties": {
+          "id": 1,
+          "description": {
+          		"trescNaglowka" : "Nazwa jednostki wojskowej 13",
+          		"trescOgloszenia" : "Charakterystyka wprowadzona przez element rozpoznawczy",
+          		"wartosc1" : "<b>Treść 1</b>: wyposażenie ",
+          		"wartosc2" : "<b>Treść 2</b>: czas obserwacji",
+          		},
+          "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
+            "symbol_circle": {
+            "radius": 8,
+            "fillColor": "#42f5a7",
+            "color": "#42f5a7",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 0.8
+          },
+          "symbol_sign": {
+            "iconUrl": 'img/SFGPUCRVG--E.png',
+            "popupAnchor": [-3, -76],
+            
+          }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.907905,
+          52.227620
+        ]
+      }
+    },
+	
+	{
+      "type": "Feature",
+        "properties": {
+          "id": 1,
+          "description": {
+          		"trescNaglowka" : "Nazwa jednostki wojskowej 14",
+          		"trescOgloszenia" : "Charakterystyka wprowadzona przez element rozpoznawczy",
+          		"wartosc1" : "<b>Treść 1</b>: wyposażenie ",
+          		"wartosc2" : "<b>Treść 2</b>: czas obserwacji",
+          		},
+          "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
+            "symbol_circle": {
+            "radius": 8,
+            "fillColor": "#42f5a7",
+            "color": "#42f5a7",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 0.8
+          },
+          "symbol_sign": {
+            "iconUrl": 'img/SFGPUCRVG--E.png',
+            "popupAnchor": [-3, -76],
+            
+          }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.765823,
+          52.317060
+        ]
+      }
+    },
+	
+    {
+      "type": "Feature",
+        "properties": {
+          "id": 1,
+          "description": {
+          		"trescNaglowka" : "Nazwa jednostki wojskowej 15",
+          		"trescOgloszenia" : "Charakterystyka wprowadzona przez element rozpoznawczy",
+          		"wartosc1" : "<b>Treść 1</b>: wyposażenie ",
+          		"wartosc2" : "<b>Treść 2</b>: czas obserwacji",
+          		},
+          "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
+            "symbol_circle": {
+            "radius": 8,
+            "fillColor": "#42f5a7",
+            "color": "#42f5a7",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 0.8
+          },
+          "symbol_sign": {
+            "iconUrl": 'img/SFGPUCRVG--E.png',
+            "popupAnchor": [-3, -76],
+            
+          }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.541268,
+          52.359218
+        ]
+      }
+    },
+	
+      
+      
+      
+      
+      
+  ]
+}
