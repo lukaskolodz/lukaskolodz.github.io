@@ -4,7 +4,6 @@ body{
 	font-size: 13px;
 	text-align: justify;
 	padding: 0px;
-	font-family: WATstyle-Regular;
 }
 .container{
 
@@ -24,23 +23,21 @@ body{
 	color:grey;
 }
 #logo{
-	font-family: WATstyle-Black;
+	
 	text-align: center;
 	min-height: 50px;
 	display: inline-block;
 }
 
 #mymap{
-  
-	height: 80vh;
+	height: calc(100vh - 210px);
 	min-height: 75px;
+	border-radius: 10px;
+	margin-top: 5px;
 }
-#oferty{
-
-	overflow: auto;
-	height: 80vh;
+.container-fluid{
+	height: calc(100vh - 198px);
 }
-
 .col[id^='oferta'] {
 	padding: 5px;
 	margin-bottom: 5px;
@@ -82,66 +79,24 @@ img{
   	from{ opacity:0.5; }
 }
 
-.blinking {
-  animation: fade 0.3s infinite alternate;
-
-}
-
-/*efekt pulsowania*/
-.pulse {
-    animation: pulsate 1s ease-out;
-    -webkit-animation: pulsate 1s ease-out;
-    -webkit-animation-iteration-count: infinite; 
-    opacity: 0.0
-}
-
 
 @keyframes pulsate {
-    0% {transform: opacity: 0.0};
-    50% {opacity: 1.0};
-    100% {transform: opacity: 0.0};
+    0% {transform: opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {transform: opacity: 0.0;}
 }
 
-
-
-@font-face {
-	font-family: "WATstyle-Black";
-	src: url("font/WATstyle-Black.otf");
-  }
-  @font-face {
-	font-family: "WATstyle-BlackItalic";
-	src: url("font/WATstyle-BlackItalic.otf");
-  }
-  @font-face {
-	font-family: "WATstyle-Bold";
-	src: url("font/WATstyle-Bold.otf");
-  }
-  @font-face {
-	font-family: "WATstyle-BoldItalic";
-	src: url("font/WATstyle-BoldItalic.otf");
-  }
-  @font-face {
-	font-family: "WATstyle-Hairline";
-	src: url("font/WATstyle-Hairline.otf");
-  }
-  @font-face {
-	font-family: "WATstyle-HairlineItalic";
-	src: url("font/WATstyle-HairlineItalic.otf");
-  }
-  @font-face {
-	font-family: "WATstyle-Light";
-	src: url("font/WATstyle-Light.otf");
-  }
-  @font-face {
-	font-family: "WATstyle-LigIta";
-	src: url("font/WATstyle-LigIta.otf");
-  }
-  @font-face {
-	font-family: "WATstyle-Regular";
-	src: url("font/WATstyle-Regular.otf");
-  }
-  @font-face {
-	font-family: "WATstyle-RegularItali";
-	src: url("font/WATstyle-RegularItalic.otf");
-  }
-  
+.leaflet-control-scale-line {
+	border: 2px solid #000000;
+	border-radius: 5px;
+    border-top: none;
+    line-height: 1.1;
+    padding: 2px 5px 1px;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #fff;
+    background: rgba(255, 255, 255, 0.5);
+}

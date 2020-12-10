@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<title></title>
 
 	<meta charset="UTF-8"></meta>
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
-
-	<!--http://localhost/geoportal/formularz/z_mapy/index.html-->
-
+	
+	<title></title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+	
 	<!--leaflet-->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+	 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
 
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<link rel="stylesheet" type="text/css" href="../../main.css">
+	<link rel="stylesheet" type="text/css" href="L.Control.MousePosition.css">
+	<link rel="stylesheet" type="text/css" href="leaflet.ScaleFactor-master/leaflet.scalefactor.css">
+	<link rel="stylesheet" type="text/css" href="leaflet.mouseCoordinate-master/src/leaflet.mouseCoordinate.css">
+
 
 
 </head>
-
 <body>
-
-
+	
 	<header>
-
-		<h1 class="logo">MAPA</h1>
-
+	
+		<h1 class="logo">WPROWADZANIE DANYCH - MAPA</h1>
+		
 		<nav id="topnav">
-
+		
 			<ul class="menu">
 				<li><a href="../../index.html">Strona główna</a></li>
 				<li><a href="../../geo_artykul/index.html">Do czego służy GEOPORTAL</a></li>
@@ -36,41 +37,52 @@
 				<li><a href="../../autor/index.html">O autorze</a></li>
 				<li><a href="../../kontakt/index.html">Kontakt</a></li>
 			</ul>
-
+			
 		</nav>
-
+	
 	</header>
 
 
 
-	
 
 
-	<div class="container-fluid">
-		<div class="row">
+<div class="container-fluid">
+		
 
-			<div id="mymap" class="col col-sm-12 col-md-12">
-
+			<div id="mymap" class="col col-sm-5 col-md-12">
+				
 			</div>
 		</div>
-	</div>
-
-	</div>
-	</div>
-
-
+		<div id="popup2" style="display: none; width: 640px">
+			<h1>Popup #2</h1>
+			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+		</div>		
 
 
-	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
-	<script src="dane.geojson"></script> <!-- ładowanie danych z pliku zewnętrznego-->
-	<script src="leaflet.ajax.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!--<script src="jQuery-Plugin-To-Create-Fullscreen-Popup-Windows/dist/jquery.fullscreen-popup.js"></script>
+--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
+<script src="dane.geojson"></script> <!-- ładowanie danych z pliku zewnętrznego-->
+<script src="leaflet.ajax.min.js"></script>
+<script src="L.Control.MousePosition.js"></script>
+<script src="leaflet.ScaleFactor-master/leaflet.scalefactor.js"></script>
+<script src="leaflet.mouseCoordinate-master/src/leaflet.mouseCoordinate.js"></script>
+<script src="leaflet.mouseCoordinate-master/src/nac.js"></script>
+<script src="leaflet.mouseCoordinate-master/src/qth.js"></script>
+<script src="leaflet.mouseCoordinate-master/src/utm.js"></script>
+<script src="leaflet.mouseCoordinate-master/src/utmref.js"></script>
 
 
-	<script type="text/javascript" src="main.js"></script>
+
+<script type="text/javascript" src="main.js"></script>
+
+
+
 
 </body>
-
 </html>

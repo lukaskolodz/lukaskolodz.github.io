@@ -1,48 +1,45 @@
 $(document).ready(function () {
-	//pętla do tworzenia listy ofert		
-
-
-	for (var licznik in geojsonFeature.features){
-		$('#oferty')
-		.append('<div id="oferta '+licznik+'" class="col">'
-						+'<img src='
-							+geojsonFeature.features[licznik].properties.miniaturka+' alt="...">'
-						+'<div id="tekst '+licznik+'"><h3>'
-							+geojsonFeature.features[licznik].properties.description.trescNaglowka
-						+'</h3></p>'
-							+geojsonFeature.features[licznik].properties.description.trescOgloszenia
-						+'</p>' 
-							+geojsonFeature.features[licznik].properties.description.wartosc1
-							+geojsonFeature.features[licznik].properties.description.wartosc2
-						+'</div>'
-				+'</div>'
-		)
-	};				
+				
   //wczytywanie mapy
 
     //deklaracja map podkładowych
     var lyrOSM = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png'),
         lyrORTO = L.tileLayer.wms("http://mapy.geoportal.gov.pl/wss/service/img/guest/ORTO/MapServer/WMSServer", {layers: "Raster", format: 'image/png', transparent : 'true', version : '1.1.1'}),    
         lyrSozo = L.tileLayer.wms("http://mapy.geoportal.gov.pl/wss/service/img/guest/SOZO/MapServer/WMSServer", {layers: "Raster", format: 'image/png', transparent : 'true', version : '1.1.1'}),
-        
-        // przypisuję do zmiennej mymap obiekt mapa z klasy map
+        rzeki_linie = L.tileLayer.wms("http://localhost:8080/geoserver/aaa/wms",{layers: "aaa:LBH140", format: 'image/png', transparent : 'true', version : '1.1.1'}),
+		rzeki_obszary = L.tileLayer.wms("http://localhost:8080/geoserver/aaa/wms",{layers: "aaa:ABH140", format: 'image/png', transparent : 'true', version : '1.1.1'}),
+		lasy = L.tileLayer.wms("http://localhost:8080/geoserver/aaa/wms",{layers: "aaa:AEC015", format: 'image/png', transparent : 'true', version : '1.1.1'}),
+		ukształtowanie_terenu = L.tileLayer.wms("http://localhost:8080/geoserver/aaa/wms",{layers: "aaa:geotiff_coverage", format: 'image/png', transparent : 'true', version : '1.1.1'}),
+		// przypisuję do zmiennej mymap obiekt mapa z klasy map
         mymap = L.map('mymap', {center: [52.3289, 21.0], zoom: 10, zoomControl: false, attributionControl: false});
 
     mymap.addLayer(lyrOSM);
         
     var baseMaps = {
         "Openstreetmap": lyrOSM,
-        "Ortofotomapa": lyrORTO,
-        "Mapa Sozologiczna": lyrSozo        
-      };
+        "Ortofotomapa": lyrORTO,       
+	  };
+	  
+	  var overlays = {
+		"Rzeki linie" :rzeki_linie, 
+		"Rzeki obszary" :rzeki_obszary,
+		"Lasy" :lasy,
+		"Ukształtowanie_terenu" :ukształtowanie_terenu,
+		
+	};
     
     //polecenie dodania ikonki do wyboru danych
-    L.control.layers(baseMaps).addTo(mymap);
+    L.control.layers(baseMaps, overlays).addTo(mymap);
 
     //dodaje skale
-    L.control.scale({position:'bottomright', imperial:false, maxWidth:200}).addTo(mymap);
+	L.control.scale({position:'bottomright', imperial:false, maxWidth:200}).addTo(mymap);
+	
+	L.control.scalefactor({ position: "bottomright", imperial: false, width: 200}).addTo(mymap);
+
+    L.control.mouseCoordinate({utm:true,utmref:true,gps:true,gpsLong:true, position: "bottomleft"}).addTo(mymap);
 
 
+/*
     //dodaję własnego markera
     var marker;
  	var myLayer = L.geoJSON(geojsonFeature, 
@@ -65,9 +62,9 @@ $(document).ready(function () {
 				return marker;
 			}
 		}
-		).addTo(mymap);
+		).addTo(mymap);*/
  	//koniec dodawanie markerów
-
+/*
  	 $( ".col[id^='oferta']" ).mouseover(function() {
  	 		var str=parseInt(this.id[7]);
     		marker = L.geoJSON(geojsonFeature.features[str], {
@@ -104,5 +101,5 @@ $(document).ready(function () {
 		 	//alert( "Handler for .click() called." );
 		 	marker.closePopup();
 		 	mymap.removeLayer(marker)
-		});
+		});*/
 });

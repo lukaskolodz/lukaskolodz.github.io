@@ -4,7 +4,8 @@ body{
 	margin:0px;
 	font-size: 1em;
 	text-align: justify;
-	padding: 0px;
+  padding: 0px;
+  overflow: hidden;
 }
 .container{
 
@@ -17,7 +18,6 @@ body{
      margin-left: auto;
 }
 .row{
-	
 	margin:0px;
 }
 .col {
@@ -106,38 +106,37 @@ img{
 }
 
 #przycisk1 {
-    background-color: lightgray;
+    background-color:  #2f7942;
     font-size:32px;
-    color:brown;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20vh;
-    margin-bottom: 20vh;
+    
     height:40vh;
     width:60vh;
     border-radius: 10vh;
-    border-color: #b30039;
+    border-color: #ffffff;
     border-width: 2px;
-    color: #b30039;
+    color: #fff;
 }
 
 #przycisk2 {
-    background-color: lightgray;
+    background-color:  #2f7942;
     font-size:32px;
-    color:brown;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20vh;
-    margin-bottom: 20vh;
+    color:#fff;
     height:40vh;
     width:60vh;
     border-radius: 10vh;
-    border-color: #b30039;
+    border-color: #ffffff;
     border-width: 2px;
 }
 a {
-  color:#b30039 ;
+  color:#d3d3d3 ;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
 }
 a:hover{
-  color:#92002e ;
+  color:#fff ;
+}
+.container-fluid{
+  height: calc(100vh - 264px);
 }

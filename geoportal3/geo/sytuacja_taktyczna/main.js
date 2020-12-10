@@ -1,24 +1,45 @@
 $(document).ready(function () {
   //pętla do tworzenia listy ofert
 
-  /*
-	for (var licznik in geojsonFeature.features){
-		$('#oferty')
-		.append('<div id="oferta '+licznik+'" class="col">'
-						+'<img src='
-							+geojsonFeature.features[licznik].properties.miniaturka+' alt="...">'
-						+'<div id="tekst '+licznik+'"><h3>'
-							+geojsonFeature.features[licznik].properties.description.trescNaglowka
-						+'</h3></p>'
-							+geojsonFeature.features[licznik].properties.description.trescOgloszenia
-						+'</p>' 
-							+geojsonFeature.features[licznik].properties.description.wartosc1
-							+geojsonFeature.features[licznik].properties.description.wartosc2
-						+'</div>'
-				+'</div>'
-		)
-	};			*/
+  // for (var licznik in geojsonFeature.features){
+  // 	$('#oferty')
+  // 	.append('<div id="oferta '+licznik+'" class="col">'
+  // 					+'<img src='
+  // 						+geojsonFeature.features[licznik].properties.miniaturka+' alt="...">'
+  // 					+'<div id="tekst '+licznik+'"><h3>'
+  // 						+geojsonFeature.features[licznik].properties.description.trescNaglowka
+  // 					+'</h3></p>'
+  // 						+geojsonFeature.features[licznik].properties.description.trescOgloszenia
+  // 					+'</p>'
+  // 						+geojsonFeature.features[licznik].properties.description.wartosc1
+  // 						+geojsonFeature.features[licznik].properties.description.wartosc2
+  // 					+'</div>'
+  // 			+'</div>'
+  // 	)
+  // };
   //wczytywanie mapy
+
+  function oferty(dane) {
+    console.log(dane)
+    for (var licznik in dane.features) {
+      console.log(dane.features[licznik].properties.symbol);
+      $("#oferty").append(
+        '<div id= "oferta'+licznik+'" class="col">'
+        +'<img src=img/'
+          +dane.features[licznik].properties.symbol+'.png alt="...">'
+        +'<div id="tekst '+licznik+'"><h3>'
+				  +'<b>'+dane.features[licznik].properties.nazwa+'</b>'
+				  +'</p>'
+				  +dane.features[licznik].properties.notatka
+				  +'</p>' 
+          +'Wyposażenie: '+dane.features[licznik].properties.wyposazenie
+          +'<p>'
+				  +'Czas obserwacj: '+dane.features[licznik].properties.timestamp
+				+'</div>'
+        +'</div>'
+      );
+    }
+  }
 
   //deklaracja map podkładowych
   var lyrOSM = L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png"),
@@ -40,6 +61,15 @@ $(document).ready(function () {
         version: "1.1.1",
       }
     ),
+    lyrORTOwmts = L.tileLayer.wms(
+      "https://mapy.geoportal.gov.pl/wss/service/WMTS/guest/wmts/ORTO/MapServer/WMSServer",
+      {
+        layers: "Raster",
+        format: "image/png",
+        transparent: "true",
+        version: "1.1.1",
+      }
+    ),
     // przypisuję do zmiennej mymap obiekt mapa z klasy map
     mymap = L.map("mymap", {
       center: [52.3289, 21.0],
@@ -53,7 +83,6 @@ $(document).ready(function () {
   var baseMaps = {
     Openstreetmap: lyrOSM,
     Ortofotomapa: lyrORTO,
-    "Mapa Sozologiczna": lyrSozo,
   };
 
   //polecenie dodania ikonki do wyboru danych
@@ -64,7 +93,19 @@ $(document).ready(function () {
     .scale({ position: "bottomright", imperial: false, maxWidth: 200 })
     .addTo(mymap);
 
-  L.control.mousePosition().addTo(mymap);
+  L.control
+    .scalefactor({ position: "bottomright", imperial: false, width: 200 })
+    .addTo(mymap);
+
+  L.control
+    .mouseCoordinate({
+      utm: true,
+      utmref: true,
+      gps: true,
+      gpsLong: true,
+      position: "bottomleft",
+    })
+    .addTo(mymap);
 
   //dodawanie wsp kursora
   //L.control.mousePosition({position:'bottomrleft', imperial:false, maxWidth:200}).addTo(map);
@@ -94,59 +135,24 @@ $(document).ready(function () {
 		).addTo(mymap);*/
   //koniec dodawanie markerów
 
-
-var	g=[];
-	g = fetch(
-    "http://localhost:8080/geoserver/aaa/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=aaa%3Ajedn&maxFeatures=50&outputFormat=application%2Fjson"
-  )
-    .then((response) => response.json())
-	//.then((data) => L.geoJSON(data));
-	console.log(g);
-
   fetch(
     "http://localhost:8080/geoserver/aaa/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=aaa%3Ajedn&maxFeatures=50&outputFormat=application%2Fjson"
   )
     .then((response) => response.json())
-    .then((data) =>{
+    .then((data) => {
       L.geoJSON(data, {
         pointToLayer: function (feature, latlng) {
           return L.marker(latlng, {
             icon: L.icon({
               // modify icon
               iconUrl: "img/" + feature.properties.symbol + ".png",
-              iconSize: [40, 34],
+              //iconSize: [40, 34],
             }),
           });
         },
-	  }).addTo(mymap);
-	 console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>",data);}
-    );
-  //console.log();
-  //pętla do tworzenia listy ofert
-  //var a = fetch ("http://localhost:8080/geoserver/aaa/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=aaa%3Ajedn&maxFeatures=50&outputFormat=application%2Fjson").then(response=>response.json()).then(data=>L.geoJSON(data));
-  //console.log(a);
-  for (var licznik in geojsonFeature.features) {
-    $("#oferty").append(
-      '<div id="oferta ' +
-        licznik +
-        '" class="col">' +
-        "<img src=" +
-        geojsonFeature.features[licznik].properties.miniaturka +
-        ' alt="...">' +
-        '<div id="tekst ' +
-        licznik +
-        '"><h3>' +
-        geojsonFeature.features[licznik].properties.description.trescNaglowka +
-        "</h3></p>" +
-        geojsonFeature.features[licznik].properties.description
-          .trescOgloszenia +
-        "</p>" +
-        geojsonFeature.features[licznik].properties.description.wartosc1 +
-        geojsonFeature.features[licznik].properties.description.wartosc2 +
-        "</div>" +
-        "</div>"
-    );
-  }
+      }).addTo(mymap);
+      oferty(data);
+    });
 
   $(".col[id^='oferta']").mouseover(function () {
     var str = parseInt(this.id[7]);

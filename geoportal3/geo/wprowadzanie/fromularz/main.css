@@ -102,6 +102,8 @@ img{
 }
 
 form {
+	
+	border-radius: 10px;
 	margin:auto;
 	//text-align: center;
 	width: 50%;

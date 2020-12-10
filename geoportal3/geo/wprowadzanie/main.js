@@ -39,8 +39,7 @@ $(document).ready(function () {
         
     var baseMaps = {
         "Openstreetmap": lyrOSM,
-        "Ortofotomapa": lyrORTO,
-        "Mapa Sozologiczna": lyrSozo        
+        "Ortofotomapa": lyrORTO,       
       };
     
     //polecenie dodania ikonki do wyboru danych

@@ -1,5 +1,7 @@
 html {
   background-color: #fff;
+  height: 100vh;
+  scroll-margin-left: ;
 }
 header {
   background-color: #fff;
@@ -11,6 +13,7 @@ body {
   color: #efefef;
   font-family: WATstyle-Regular;
   font-size: 17px;
+  overflow: hidden;
 }
 
 h1.logo {
@@ -111,8 +114,7 @@ figcaption {
   width: 950px;
   text-align: center;
   padding-top: 10px;
-  padding-bottom: 80px;
-  margin-top: 40px;
+  padding-bottom: 10px;
 }
 
 #newest {
@@ -123,7 +125,7 @@ figcaption {
   background-color: #2f7942;
   padding: 10px;
   text-align: justify;
-  margin-top: 40px;
+  margin-top: 20px;
   border-radius: 20px;
 }
 
@@ -144,6 +146,7 @@ figcaption {
   display: inline-block;
   width: 750px;
   font-size: 15px;
+  color: #fff;
 }
 
 h2 {
@@ -184,6 +187,7 @@ h2 {
   margin-right: auto;
   text-align: center;
   padding: 20px;
+  background-color: #21562f;
 }
 
 .container {

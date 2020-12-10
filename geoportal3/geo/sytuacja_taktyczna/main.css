@@ -6,7 +6,7 @@ body{
 	padding: 0px;
 }
 .container{
-
+	border-radius: 10px;
 	margin:0px;
 	margin-top:5px;
      padding-right: 0; /*15px in bootstrap.css*/
@@ -15,7 +15,7 @@ body{
      margin-left: auto;
 }
 .row{
-	
+	height: calc(100vh - 180px);
 	margin:0px;
 }
 .col {
@@ -30,51 +30,52 @@ body{
 }
 
 #mymap{
-
-	height: 80vh;
+	height: calc(100vh - 198px);
 	min-height: 75px;
-	margin-top: 1vh;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px ;
+	margin-top: 5px;
+	
 }
 #oferty{
-
+	margin-top: 5px;
+	background-color: #21562f;
 	overflow: auto;
-	height: 80vh;
-	margin-top: 1vh;
+	height: calc(100vh - 210px);;
+	
+	
 }
 
 .col[id^='oferta'] {
+	color: #333333;
 	padding: 5px;
 	margin-bottom: 5px;
 	margin-top:5px;
 	overflow: hidden;
 	min-height: 75px;
-	background-color: #e9dbff;
+	background-color: #fff;
 	border-radius: 7px 7px 7px 7px;
 	-moz-border-radius: 7px 7px 7px 7px;
 	-webkit-border-radius: 7px 7px 7px 7px;
-	-webkit-box-shadow: 9px 9px 0px -6px rgba(0,0,0,0.44);
+	/* -webkit-box-shadow: 9px 9px 0px -6px rgba(0,0,0,0.44);
 	-moz-box-shadow: 9px 9px 0px -6px rgba(0,0,0,0.44);
-	box-shadow: 9px 9px 0px -6px rgba(0,0,0,0.44);
+	box-shadow: 9px 9px 0px -6px rgba(0,0,0,0.44); */
 }
 
 .col[id^='oferta']:hover{
-	background-color: #d6e6ff; 
+	background-color: #a3dbb2; 
 }
 
 [id^='tekst']{
 	font-size: 13px;
 }
 
-
-
 [id^='tekst'] h3{
 	font-size: 16px;
 }
 
-
 img{
 	height: 60px;
-	
 	float:left;
 	margin:15px;
 }
@@ -103,4 +104,17 @@ img{
     100% {transform: opacity: 0.0;}
 }
 
-
+.leaflet-control-scale-line {
+	border: 2px solid #000000;
+	border-radius: 5px;
+    border-top: none;
+    line-height: 1.1;
+    padding: 2px 5px 1px;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #fff;
+    background: rgba(255, 255, 255, 0.5);
+}
